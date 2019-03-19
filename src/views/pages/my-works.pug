@@ -1,0 +1,12 @@
+extends ../main.layout.pug
+
+block content
+  .wrapper 
+    .my-works
+        +present
+        main.content
+          include ../common/portfolio.pug
+          include ../common/comment.pug
+block scripts
+  script(src="works.bundle.js")
+          
