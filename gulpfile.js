@@ -92,12 +92,12 @@ gulp.task("svg", done => {
     )
     .pipe(
       $gp.cheerio({
-        run($) {
-          $("[fill], [stroke], [style], [width], [height]")
-            .removeAttr("fill")
-            .removeAttr("stroke")
-            .removeAttr("style");
-        },
+        // run($) {
+        //   $("[fill], [stroke], [style], [width], [height]")
+        //     // .removeAttr("fill")
+        //     .removeAttr("stroke");
+        //     // .removeAttr("style");
+        // },
         parserOptions: { xmlMode: true }
       })
     )

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 63">
+  <defs>
+    <style>
+      <!-- .cls-2,.cls-4{fill:#fff;stroke:#3f3843;stroke-miterlimit:10}.cls-4{stroke-width:2px;fill:none} -->
+    </style>
+  </defs>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="icons">
+      <path fill="#fff" d="M12 42V26l-6.78 5.22A7 7 0 0 0 3 36.35V57h19v-4s4-2.42 4-7v-4z" stroke-width="2" stroke="#3f3843" stroke-miterlimit="20"/>
+      <path class="cls-2" fill="#3f3843" d="M42 1H18l-8 8v34h32a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2z"/>
+      <path fill="#a3d4ff" stroke="#3f3843" stroke-miterlimit="10" d="M10 10h9V1"/>
+      <path class="cls-4" fill="#fff" d="M12 43h30a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H18l-8 8v29"/>
+      <path class="cls-4" d="M13 10h6V4"/>
+      <path class="cls-4" fill="#3f3843" stroke-width="2" d="M17 19h20M17 23h12M17 15h20"/>
+      <path class="cls-2" fill="#3f3843" stroke-width="2" d="M19.32 29.25C17 31.56 7.93 40.43 7.93 40.43l8 10.43a9.11 9.11 0 0 0 1.13-9.1s4-4.52 5-5.89c2.22-3.27-.42-8.94-2.74-6.62z"/>
+      <path class="cls-4" fill="#fff" d="M7.93 40.43S17 31.56 19.32 29.25s5 3.36 2.76 6.63c-1 1.37-5 5.89-5 5.89a9.11 9.11 0 0 1-1.13 9.1"/>
+      <path class="cls-4" fill="#3f3843" d="M1 63v-7h24v7M4 60h3"/>
+      <path class="cls-4" fill="#3f3843" d="M1 63v-7h24v7"/>
+    </g>
+  </g>
+</svg>

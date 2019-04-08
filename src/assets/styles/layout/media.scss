@@ -1,8 +1,6 @@
 
-@mixin desktop($max-width: 1200px)
-{
-     @media (max-width: $max-width)
-{
+@mixin desktop($max-width: 1200px){
+     @media (max-width: $max-width){
          @content
      }
 }
@@ -25,16 +23,20 @@
     }
 }
 
+@mixin interval($max-width: 1035px) {
+    @media (max-width: $max-width) {
+         @content
+     }
+}
+
 @mixin tablets($max-width: 768px) {
     @media (max-width: $max-width) {
          @content
      }
-    }
+}
 
 @mixin phones($max-width: 480px) {
     @media (max-width: $max-width) {
         @content
      }
-    }
-
-
+}

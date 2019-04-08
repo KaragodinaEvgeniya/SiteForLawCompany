@@ -7,6 +7,7 @@
   "light-grey": "#dfdcd5",
   "test" : "#000",
   "desktop": "1200px",
+  "interval": "1035px",
   "tablets":"768px",
   "phones":"480px"
 }

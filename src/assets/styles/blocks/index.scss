@@ -1,0 +1,229 @@
+.welcome{    
+    display: flex;
+    flex-flow: column;   
+    align-items: center;
+    background:url(./assets/images/img/background-desktop.png) center center no-repeat;  
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;    
+    
+
+    
+
+    @include tablets($tablets){
+        background:url(./assets/images/img/background-phones.png) center center no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;     
+            
+    }
+}
+
+.welcome__about {
+    display: flex;    
+    justify-content: center;
+    
+    @include tablets($tablets){
+        flex-flow: row;         
+        align-items: flex-end;
+            
+    }
+    @include phones($phones){
+        align-items: center;
+        flex-flow: column;
+    }
+
+    
+}
+
+.welcome__content{
+    display: flex;
+    flex-flow: column;
+    align-items: center; 
+    width: 60%;
+    
+
+    @include tablets($tablets){
+        width: 50%;  
+        margin-right: 10%;    
+    }
+
+    @include phones($phones){
+        width: 100%;
+        margin-right: 0;
+    }
+}
+.welcome__title{
+    color: $yellow;
+    font-size: 70px;
+
+    @include interval($interval){
+        font-size: 50px;
+        width: 80%;
+
+    }
+
+    @include tablets($tablets){
+        font-size: 40px;
+        width: 100%; 
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            margin-left: 20px;
+            color: $yellow;
+            
+        }
+    }
+}
+
+.welcome__info{
+    display: flex; 
+    font-size: 18px;   
+    
+    @include interval($interval){
+        font-size: 14px;
+
+    }
+    @include tablets($tablets){
+        margin: 0;   
+    }
+
+    @include phones($phones){
+        margin-bottom: 30px;
+    }
+    
+}
+
+.welcome__name{
+    @include roboto-regular;    
+    color: $yellow;
+    display: flex;
+    flex-flow: column;
+    width: 30%;
+    line-height: 20px;
+    margin-right: 10%;
+
+    &::after{
+        content: "";
+        width: 100%;        
+        display: flex;
+        margin-top: 50px;
+        height: 2px;
+        background-color: $yellow;
+    }
+
+    @include tablets($tablets){
+        display: none;  
+    }
+}
+
+.welcome__text{
+    @include roboto-regular;    
+    line-height: 25px;
+    width: 60%;
+    
+
+    @include tablets($tablets){
+        width: 100%; 
+        
+    }
+
+   
+}
+
+.welcome__statistics{
+    display: flex;
+    width: 45%;
+    justify-content: flex-end;
+    
+    
+    @include tablets($tablets){
+        width: 40%;      
+    }
+
+    @include phones($phones){
+        width: 100%; 
+        justify-content: flex-start;
+       
+    }
+}
+
+.welcome__list{
+    display: flex;
+    flex-flow: column;    
+    justify-content: center;  
+   
+    
+    @include phones($phones){
+        width: 100%;
+    }
+    
+}
+
+.welcome__item{
+    display: flex;
+    justify-content: space-between;   
+    flex-flow: column; 
+    // width: 65%;
+    margin-bottom: 34px;
+    
+
+    &:last-child{
+        margin-bottom: 0;
+    }   
+
+    @include tablets($tablets){
+        margin-bottom: 40px; 
+        
+    }
+    @include phones($phones){
+        margin-bottom: 10px;
+        flex-flow: row;
+    }
+
+    
+}
+
+.welcome__value{   
+    // width: 60%;   
+    @include PlayfairDisplay-Black;
+    font-size: 70px;
+    color: $white;   
+   vertical-align: baseline; 
+   
+   @include interval($interval){
+    font-size: 50px;
+    }
+
+    @include tablets($tablets){
+        font-size: 40px; 
+        
+    }
+}
+span{
+    font-size: 40px;  
+    
+    @include interval($interval){
+        font-size: 25px;
+        }
+}
+
+.welcome__feature{
+    @include roboto-medium;
+    color: $yellow;
+    // width: 66%;
+    font-size: 20px;
+    line-height: 20px;
+
+    @include phones($phones){
+        display: flex;
+        align-items: center;
+       width: 60%;
+    }
+    
+    
+}
