@@ -1,0 +1,44 @@
+extends ../main.layout.pug
+
+block content
+    .wrapper 
+        .bankruptcy
+            .bankruptcy_one
+                include ../common/header.pug 
+                .container--bankruptcy     
+                    .container
+                        ul.bunkruptcy__breadcrumbs
+                            li.bunkruptcy__item
+                                a.bunkruptcy__link(href='http://yuriskonsult.info') главная страница
+                            li.bunkruptcy__item
+                                a.bunkruptcy__link.bunkruptcy__link--none(href='http://yuriskonsult.info/services.html') услуги частным клиентам
+                        .bankruptcy__title 
+                            h1.bankruptcy__caption Юридическое консультирование 
+                        .bankruptcy__content
+                            .bankruptcy__text Квалифицированная юридическая помощь в Тюмени в нынешних условиях качества бытовых услуг, ведения бизнеса, а также ужесточения законодательной базы на том или ином временном этапе необходима как физическим, так и юридическим лицам. Наши специалисты готовы предоставить вам грамотную правовую поддержку в любом интересующем вас направлении в любом городе России. #[br] Чтобы вам не пришлось тратить лишнее время на поиск действительно подходящего вам по всем требованиям юриста, а уже сейчас вы приняли решение принять помощь наших сотрудников, ознакомьтесь с тем, какую выгоду вы получите в этом случае.
+            .advantage-bankruptcy.bankruptcy_two
+                .container
+                    .advantage__title 
+                        h2.advantage__caption Мы гарантируем вам                 
+                    main.advantage__content.advantage__content--padding 
+                        ul.advantage__list
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('knowledge','advantage__knowledge') 
+                                .advantage__feature Лояльное, вежливое отношение с максимально подробным анализом вашей ситуации, изложенным в доступной и понятной для вас форме                           
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('price','advantage__price') 
+                                .advantage__feature Разумные цены на услуги при бесплатном консультировании в течение всего процесса разбирательства                          
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('distantly','advantage__distantly') 
+                                .advantage__feature Урегулирование любых вопросов в любых направлениях путем консультирования или же представления ваших интересов в соответствующих инстанциях                            
+                            li.advantage__item  
+                                .advantage__icons-margin              
+                                    +icon('concern','advantage__concern') 
+                                .advantage__feature Профессиональное оформление всей необходимой для восстановления ваших прав документации, с точным соблюдением всех норм, положений, требований актуального законодательства. 
+        include ../common/menu.pug 
+        include ../common/form.pug                         
+block scripts
+    script(src="bankruptcy.bundle.js")                                                

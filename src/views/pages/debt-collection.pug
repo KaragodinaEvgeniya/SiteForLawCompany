@@ -1,0 +1,48 @@
+extends ../main.layout.pug
+
+block content
+    .wrapper 
+        .bankruptcy
+            .bankruptcy_one
+                include ../common/header.pug 
+                .container--bankruptcy     
+                    .container
+                        ul.bunkruptcy__breadcrumbs
+                            li.bunkruptcy__item
+                                a.bunkruptcy__link(href='http://yuriskonsult.info') главная страница
+                            li.bunkruptcy__item
+                                a.bunkruptcy__link.bunkruptcy__link--none(href='http://yuriskonsult.info/services.html') услуги частным клиентам
+                        .bankruptcy__title 
+                            h1.bankruptcy__caption Взыскание задолженности 
+                        .bankruptcy__content
+                            .bankruptcy__text Психологи советуют людям, дающим деньги в долг, относиться философски к финансам, временно перекочевавшим в чужой карман: будьте готовы к тому, что «временно» может превратиться в «навсегда», и рассматривайте возвращение долга как приятный сюрприз. У юристов позиция иная: если кто-то очень не хочет возвращать заём, кредит или расплачиваться с различного задолженностями, взыскание долга следует произвести принудительно. Какая позиция вам ближе? Если вы делает выбор в пользу второго варианта и твёрдо намерены вернуть свои деньги, вам нужна помощь юриста по взысканию долгов. #[br] Своевременное обращение в нашу компанию за услугами по возврату денежных средств позволяет свести к минимуму ваши потери и предельно ускорить восстановление нарушенных прав. Задержка начала процедуры взыскания задолженности может привести к пропуску, а потом и к потере возможного срока для обращения в судебные инстанции за возвратом долга.
+            .advantage-bankruptcy.bankruptcy_two
+                .container
+                    .advantage__title 
+                        h2.advantage__caption Наши преимущества                 
+                    main.advantage__content 
+                        ul.advantage__list.advantage__list--margin
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('knowledge','advantage__knowledge') 
+                                h3.advantage__feature Бесплатная консультация
+                                p.advantage__text Выслушаем Вас, озвучим перспективы спора и подготовим ближайший план действий
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('price','advantage__price') 
+                                h3.advantage__feature Всё включено
+                                p.advantage__text Стоимость услуг закреплена в договоре и не меняется в процессе работы
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('distantly','advantage__distantly') 
+                                h3.advantage__feature Дистанционное сотрудничество
+                                p.advantage__text Мы можем работать дистанционно. Не важно, находитесь Вы в Тюмени или в Москве, мы готовы оказать Вам юридическую помощь или защитить Ваши интересы в судах различной юрисдикции посредством дистанционного оказания услуг.
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('concern','advantage__concern') 
+                                h3.advantage__feature Судебные юристы
+                                p.advantage__text Мы имеем постоянную практику по взысканию задолженносте
+        include ../common/menu.pug 
+        include ../common/form.pug         
+block scripts
+    script(src="bankruptcy.bundle.js")                                   

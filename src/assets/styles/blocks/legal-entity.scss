@@ -1,0 +1,105 @@
+.legal-entity{
+    @include block;    
+}
+
+.legal--active{
+    left: 0px;
+}
+
+.legal-entity__container{
+   @include container;    
+}
+
+.legal-entity__header{
+    @include header    
+}
+
+.legal-entity__logo{
+    @include logo     
+}
+
+.legal-entity__content{
+    @include content   
+}  
+.legal-entity__title{
+    @include title;
+    vertical-align: baseline; 
+    
+    justify-content: flex-start;
+    &::after{        
+        margin-left: 2%;
+        width: 16%;
+        
+      
+        @include interval{
+            margin-left: 0;
+           
+        }
+    }
+
+}
+
+.legal-entity__close{
+    @include close
+}
+
+.legal-entity__list{
+    @include list
+}
+
+.legal-entity__item{
+    @include item
+}
+
+.legal-entity__icons{
+    @include icons
+    
+}
+
+.legal-entity__feature{
+    @include feature
+}
+
+.legal-entity__consultancy{
+    width: 65%;
+    height: 65%;
+}
+
+.legal-entity__debt{
+    width: 60%;
+    height: 60%;
+}
+
+.legal-entity__corporate{
+    width: 60%;
+    height: 60%;
+}
+
+.legal-entity__labour{
+    width: 55%;
+    height: 55%;
+    
+}
+
+.legal-entity__deal{
+    width: 75%;
+    height: 75%;
+}
+
+.legal-entity__worker{
+    width: 75%;
+    height: 75%;
+}
+
+.legal-entity__footer-list{
+    @include footer-list
+    
+}
+
+.legal-entity__footer-item{
+    @include footer-item
+}
+
+.legal-entity__footer-feature{
+    @include footer-feature
+}

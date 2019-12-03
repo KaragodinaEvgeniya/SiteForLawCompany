@@ -1,0 +1,371 @@
+.feedback{
+    display: flex;
+    flex-flow: column;   
+    align-items: center;
+    background:url(./assets/images/img/feedback.png) center center no-repeat;  
+    background-size: cover;
+    background-position: center;   
+    height: 100%;
+    width: 100vw; 
+    min-height: 100vh;  
+    animation: heartbeat 10s infinite ; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+
+    @include tablets($tablets){
+        animation: none;
+    }
+   
+}
+
+@keyframes heartbeat {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 110% 110%;
+      
+    }
+}
+
+
+.feedback
+.header__elem--feedback{
+    color: $yellow;
+}
+
+
+.feedback__title{
+   display: flex;
+   align-items: flex-start;
+    color: $yellow; 
+    margin-bottom: 60px;
+    width:100%;   
+
+    @include tablets($tablets){
+        margin-bottom: 0px;
+    }
+
+    @include phones($phones){
+        flex-flow: column;
+    }
+}
+
+.feedback__caption{
+    width: 40%;
+    margin-right: 20%;
+    
+    @include tablets($tablets){
+        font-size: 36px;
+    }
+
+    @include phones($phones){
+        width: 100%;
+        margin-right: 15px;
+        margin-bottom: 25px;
+    }
+}
+
+.feedback__info{
+    width: 40%;
+    margin-top: 17px;
+
+    @include phones($phones){
+        width: 100%;
+        margin-right: 15px;
+        margin-top: 0px;
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+}
+
+.feedback__content  {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+   
+
+    @include tablets($tablets){
+        flex-flow: column;
+        height: 80%;
+        
+    }
+}
+
+.feedback__list {
+    display: flex;    
+    width: 100%;
+
+    @include tablets($tablets){
+        flex-flow: column;
+        
+    }
+}
+
+.feedback__item{
+    display: flex;
+    width: 45%;
+    height: 100%;
+    margin-right: 10%;
+    flex-flow: column; 
+
+    @include tablets($tablets){
+        width: 100%;
+    }   
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    
+}
+
+.feedback-form{
+    display: flex;
+    width: 100%;
+    height: 40%;   
+    justify-content: flex-start;
+    margin-bottom: 5%;
+
+    @include tablets($tablets){
+        min-height: 308px;
+        margin-bottom: 25px;
+        padding-right: 15px;
+    }
+}
+
+.feedback-form__topic,
+.feedback-form__name,
+.feedback-form__phone,
+.feedback-form__email,
+.feedback-form__check-label{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    min-height: 35px;
+    font-size: 16px; 
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:active,
+    input:-webkit-autofill:focus {   
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $white;
+}
+
+}
+
+.feedback-form__elem{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $yellow; 
+    color: $white;
+    font-size: 16px;
+    outline: none; 
+       
+
+    &::placeholder{
+        color: $white;
+        font-size: 16px;
+    }    
+
+}
+
+
+
+.feedback-form__check-label{
+    align-items: center;
+    border-bottom: none;
+    position: relative;
+}
+
+.feedback-form__check-block{
+    width: 50px;
+    height: 100%;   
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.feedback-form__check-content    {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    border-bottom: 1px solid $yellow; 
+   
+
+    &::after{
+        content: "";
+        opacity: 0;
+        background:url(./assets/images/img/checkbox.png) center center no-repeat;
+        background-size: 60%;
+        width: 50px;
+        height: 50px;        
+
+    }
+}
+
+.feedback-form__check-block:checked + .feedback-form__check-content{
+    &::after{
+        opacity: 1;
+    }
+}
+
+.feedback-form__text{
+    font-size: 16px;
+    color: $yellow;
+    margin-right: 7%;
+
+    @include interval($interval){
+        font-size: 14px;
+    }
+
+    @include phones($phones){
+        margin-right: 3%;
+        margin-left: 5%;
+        font-size: 11px;
+    }
+}
+
+.feedback-form-btn{
+    border: none;
+    background: none;
+    color: $yellow;
+    box-shadow: 0 1px  0.5px  rgba(227, 172, 98, 1);
+    outline: none;
+
+    &:active{
+        box-shadow:  inset 0 0 3px rgba(227, 172, 98, 1);
+    }
+}
+
+.feedback-form__textarea{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+   min-height: 105px;
+
+    @include tablets($tablets){
+        margin-top: 30px;
+    }
+    
+}
+
+.feedback-form__block-text{
+    display: flex;
+    outline: 0;
+    width: 100%;
+    height: 100%;    
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $yellow; 
+    color: $white;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: none;
+
+    &::placeholder{
+        color: $white;
+        font-size: 16px;
+    }    
+}
+
+.feedback-form__file{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    min-height: 35px;
+    font-size: 16px; 
+    align-items: center;
+    padding-top: 2.5%;
+    border-bottom: 1px solid $yellow;
+    position: relative;  
+    
+}
+
+.feedback-form__elem-file{
+    opacity: 0;
+    z-index: 4;
+    
+    width: 100%;
+    height: 100%;   
+    background: transparent;
+    border: none;    
+    outline: none;  
+    cursor: pointer;
+}
+
+.feedback-form__file-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: flex;   
+    width: 100%;
+    height: 100%;  
+    color: $yellow;
+    font-size: 16px;
+    align-items: center;
+    cursor: pointer;
+
+    &::before{
+        content: "";
+        background:url(./assets/images/img/file.png) center center no-repeat;
+        width: 14px;
+        height: 100%;
+        margin-right: 15px;
+        
+    }
+
+    p{
+        margin-top: 2%;
+    }
+}
+
+.feedback-form__file-text {
+    @include roboto-light;
+    font-size: 14px;
+    // padding-left: 45%;
+    text-align: end;
+
+    @include tablets($tablets){
+        // padding-left: 20%;
+        font-size: 12px;
+    }
+}
+
+.feedback__btn{
+    width: 200px;
+    height: 40px; 
+    background: $yellow;
+    @include roboto-bold;
+    color: black;
+    margin-bottom: 20px;
+    outline: 0px;
+    transition:  0.3s ease-in-out;
+
+    &:hover,
+    :active,
+    :focus{
+        color: $white;
+    }
+
+    @include tablets($tablets){
+        width: 150px;
+    }
+}
+
+
+
+
+

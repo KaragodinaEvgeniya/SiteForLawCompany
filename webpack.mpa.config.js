@@ -2,18 +2,20 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const env = process.env.NODE_ENV;
 
 module.exports = {
-  entry: {
-    about: "./src/assets/scripts/about.js",
-    auth: "./src/assets/scripts/auth.js",
-    works: "./src/assets/scripts/works.js",
-    blog: "./src/assets/scripts/blog.js"
+  entry: {   
+    welcome: "./src/assets/scripts/welcome.js",
+    feedback: "./src/assets/scripts/feedback.js",
+    contacts: "./src/assets/scripts/contacts.js",
+    services: "./src/assets/scripts/services.js",
+    advantage:"./src/assets/scripts/advantage.js", 
+    bankruptcy:"./src/assets/scripts/bankruptcy.js"
   },
   output: {
     filename: "[name].bundle.js"
   },
   module: {
     rules: [
-      {
+      { 
         test: /\.js$/,
         loader: "babel-loader",
         exclude: /node_modules/

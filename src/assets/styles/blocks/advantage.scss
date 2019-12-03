@@ -1,0 +1,179 @@
+.advantage{
+    display: flex;
+    flex-flow: column;   
+    align-items: center;
+    background:url(./assets/images/img/services-desktop.png) center center no-repeat;  
+    background-size: cover;
+    background-position: center; 
+    min-height: 100vh;  
+    height: 100%;
+    width: 100vw; 
+    animation: heartbeat 9s infinite ; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    
+    @include interval($interval){
+        height: 100%;        
+    }
+
+    @include tablets($tablets){
+        animation: none;
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 110% 110%;
+    }
+}
+
+.advantage
+.header__elem--advantage{
+    color: $yellow;
+}
+
+
+.advantage__title{
+   display: flex;
+   align-items: flex-start;
+    color: $white; 
+    margin-bottom: 60px;
+    width:100%;   
+    height: 18%;
+}
+
+.advantage__caption{
+    width: 30%;
+    font-size: 32px;
+}
+
+.advantage__content  {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+   
+
+    @include tablets($tablets){
+        flex-flow: column;
+        height: 80%;
+        
+    }
+}
+
+.advantage__list{
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    height: 100%;
+
+    @include phones($phones){
+        flex-flow: column;
+        
+        
+    }
+
+}
+
+.advantage__list--margin{
+    margin-bottom: 50px;
+}
+
+.advantage__item  {
+    display: flex;
+    flex-flow: column;   
+    width: 20%;
+    height: 100%;
+    margin-left: 5%;
+    &:last-child
+        .advantage__icons{       
+            margin-bottom: 60px;
+        }
+
+        
+
+    @include interval($interval){
+        width: 40%;
+        margin-bottom: 60px;
+    }
+
+    @include tablets($tablets){
+          
+        
+    }
+
+    @include phones($phones){
+       
+        width: 95%;  
+        margin-left: 0;  
+        
+        &:last-child
+    .advantage__icons{       
+        margin-bottom: 25px;
+    }
+        
+    }
+
+    
+}
+
+.advantage__icons  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 95px;
+    border: 2px solid $yellow;
+    border-radius: 50%;
+    margin-bottom: 25px; 
+    min-height: 25%;
+
+    @include tablets($tablets){
+        width: 70px;
+        height: 70px;
+    }
+    
+   
+    
+}
+.advantage__knowledge{
+    
+    width: 60%;
+    height: 60%;    
+}
+
+.advantage__price{
+    width: 65%;
+    height: 65%; 
+    padding-bottom: 5px;
+    padding-right: 3px; 
+}
+
+.advantage__distantly{
+    width: 60%;
+    height: 60%; 
+}
+
+.advantage__concern{
+    width: 60%;
+    height: 60%; 
+}
+
+.advantage__feature{
+    text-align: left;
+    @include PlayfairDisplay-Black;
+    color: $yellow;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+   
+}
+
+.advantage__text{
+    text-align: left;
+    @include roboto-regular;
+}
+

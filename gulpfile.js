@@ -56,6 +56,8 @@ gulp.task("scripts", () => {
     .pipe(reload({ stream: true }));
 });
 
+
+
 //рендерим странички
 gulp.task("pug", () => {
   return gulp
@@ -80,27 +82,27 @@ gulp.task("server", () => {
 gulp.task("svg", done => {
   return gulp
     .src(`${config.SRC_DIR}/images/icons/*.svg`)
-    .pipe(
-      $gp.svgmin({
-        js2svg: {
-          pretty: true
-        },
-        plugins: [
+    // .pipe(
+    //   $gp.svgmin({
+    //     js2svg: {
+    //       pretty: true
+    //     },
+    //     plugins: [
 
-        ]
-      })
-    )
-    .pipe(
-      $gp.cheerio({
-        // run($) {
-        //   $("[fill], [stroke], [style], [width], [height]")
-        //     // .removeAttr("fill")
-        //     .removeAttr("stroke");
-        //     // .removeAttr("style");
-        // },
-        parserOptions: { xmlMode: true }
-      })
-    )
+    //     ]
+    //   })
+    // )
+    // .pipe(
+    //   $gp.cheerio({
+    //     run($) {
+    //       $(" [style], [width], [height]")
+    //         // .removeAttr("fill")
+    //         // .removeAttr("stroke")
+    //         .removeAttr("style");
+    //     },
+    //     parserOptions: { xmlMode: true }
+    //   })
+    // )
     .pipe($gp.replace("&gt;", ">"))
     .pipe(
       $gp.svgSprite({
@@ -128,8 +130,7 @@ gulp.task("images", () => {
 gulp.task("watch", () => {
   gulp.watch(`${config.SRC_DIR}/styles/**/*.scss`, gulp.series("styles"));
   gulp.watch(`${config.SRC_DIR}/images/**/*.*`, gulp.series("images"));
-  gulp.watch(`${config.SRC_DIR}/scripts/**/*.js`, gulp.series("scripts"));
-  gulp.watch(`${config.SRC_DIR}/fonts/*`, gulp.series("fonts"));
+  gulp.watch(`${config.SRC_DIR}/scripts/**/*.js`, gulp.series("scripts")); 
   gulp.watch(`${config.VIEWS_DIR}/**/*.pug`, gulp.series("pug"));
 });
 

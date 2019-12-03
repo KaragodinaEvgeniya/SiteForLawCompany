@@ -1,0 +1,48 @@
+extends ../main.layout.pug
+
+block content
+    .wrapper 
+        .feedback
+            include ../common/header.pug      
+            .container
+                .feedback__title 
+                    h1.feedback__caption Обратная связь               
+                    h4.feedback__info Все поля обязательны для заполнения
+                
+                form.feedback-form(action="" id="feedback-form")                
+                    ul.feedback__list                    
+                        li.feedback__item
+                            label.feedback-form__topic(for="")
+                                input.feedback-form__elem(type="text" placeholder="ТЕМА СООБЩЕНИЯ" name="topic" required)
+                                .error.error--name(id="errorTopic")                                                        
+                            label.feedback-form__name(for="")
+                                input.feedback-form__elem(type="text" placeholder="ВАШЕ ИМЯ" name="name" required)
+                                .error.error--name(id="errorName") 
+                            label.feedback-form__phone(for="")
+                                input.feedback-form__elem(type="tel" placeholder="КОНТАКТНЫЙ ТЕЛЕФОН" name="phone" required)
+                                .error.error--phone(id="errorPhone")
+                            label.feedback-form__email(for="")
+                                input.feedback-form__elem(type="email" placeholder="E-MAIL" name="email" required)
+                                .error.error--email(id="errorEmail")
+                            label.feedback-form__check-label(for="cb")            
+                                input.feedback-form__check-block(type="checkbox")  
+                                .feedback-form__check-content                                          
+                                p.feedback-form__text Согласие на обработку данных
+                                button.feedback-form-btn(id='moreDetails' onclick="return false;") Подробнее
+                        li.feedback__item                       
+                            label.feedback-form__textarea(for="")
+                                textarea.feedback-form__block-text(type="text" name="comment" required="" placeholder="СООБЩЕНИЕ")
+                                .error.error--comment(id="errorComment")
+                            label.feedback-form__file(for="") 
+                                input.feedback-form__elem-file(type="file" id="yourBtn"  name="file" required)
+                                .feedback-form__file-content(id="upfile")
+                                    p ПРИКРЕПИТЬ ФАЙЛ
+                            p.feedback-form__file-text  Doc (docx), pdf, jpg (jpeg) или txt до 2 Мб   
+                button.feedback__btn ОТПРАВИТЬ  
+        include ../common/consent.pug  
+        include ../common/menu.pug 
+        include ../common/form.pug  
+                         
+block scripts
+    script(src="feedback.bundle.js")  
+                          

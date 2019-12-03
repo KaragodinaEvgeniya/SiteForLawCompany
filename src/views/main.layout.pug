@@ -6,22 +6,25 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     meta(content="ie=edge" http-equiv="x-ua-compatible")
-    meta(content="width=device-width, initial-scale=1" name="viewport")
-    
-    title Portfolio | #{title}
+    meta(content="width=device-width, initial-scale=1" name="viewport")   
+    //- include http://yuriskonsult.info/send.php 
+    //- include ./pages/send.php       
+ 
+    title yuriskonsult - юридическая помощь | #{title}
     link(rel='stylesheet' href='main.min.css')
-  body
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+
     
+    body 
+
     
+     
    
     .wrapper.wraper__blog 
       
       .maincontent
         block content
+    block scripts  
+        
 
-      
-     
-    script(src='bootloader.bundle.js')
-    script(src='vendor.bundle.js')
-    block scripts
-      script(src='auth.bundle.js')
+    

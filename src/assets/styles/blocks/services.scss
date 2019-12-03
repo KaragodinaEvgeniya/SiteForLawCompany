@@ -6,17 +6,33 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-    width: 100vw;    
+    width: 100vw; 
+    animation: heartbeat 9s infinite ; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;    
+
+    @include tablets($tablets){
+        animation: none;
+        
+    }
 }
+
+.services--active{
+    height: 1400px;
+}
+
+
 
 .services
 .header__elem--services{
     color: $yellow;
 }
 
+
 .services__title{
     color: $white; 
-    margin-bottom: 10%;
+    font-size: 40px;
+   height: 30%;
     width: 100%;   
 }
 
@@ -34,14 +50,16 @@
 }
 .services__button{
     display: flex;
-    flex-flow: column;
-     height: 400px;
+    flex-flow: column;   
+     height: 400px;     
     background: none;
     border: 2px solid $yellow;
-    transition:  0.6s ease-in-out;
-    padding: 30px;
+    transition:  0.6s ease-in-out;   
     width: 260px;
     margin-left: 10%;
+    padding-left: 25px;
+    padding-top: 45px;
+    outline: none;
    
     
     &:hover{
@@ -79,8 +97,7 @@
 
     @include interval($interval){
         min-height: 350px;   
-        width: 250px;
-        padding: 15px;
+        width: 250px;       
         margin-left: 5%;
     }
 
@@ -88,10 +105,13 @@
         flex-flow: row;
         justify-content: flex-start;
         align-items: center;
-        min-height: 50px;
+        min-height: 80px;
         width: 100%;
+       height: 105px;;
         margin-bottom: 10%;
         margin-left: 0;
+        padding-top: 0;
+        padding-left: 15px;
         
     }
     

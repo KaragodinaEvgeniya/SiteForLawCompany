@@ -1,4 +1,4 @@
-extends ../auth.layout.pug
+extends ../main.layout.pug
 
 block content
     .wrapper 
@@ -24,25 +24,11 @@ block content
                                 p.welcome__value 1&nbsp;
                                     span млрд ₽
                                 p.welcome__feature выигранных в суде
-        nav.menu
-            ul.menu__list
-                li.menu__item
-                    a.menu__elem(href='#') услуги
-                li.menu__item
-                    a.menu__elem(href='#') преимущества
-                li.menu__item
-                    a.menu__elem(href='#') контакты
-                li.menu__item
-                    a.menu__elem(href='#') обратная связь  
-        form.form(action="")  
-            label.form__block(for="name")
-                input.form__input(type="text" placeholder="Ваше имя" name="name" required) 
-                .error.error_name(id="errorName") 
-            label.form__block(for="tel")
-                input.form__input(type="tel" placeholder="Телефон" name="tel" required) 
-                .error.error_name(id="errorTel") 
-            .form__btn
-                button.form__button Отправить
+                include ../common/menu.pug 
+        include ../common/form.pug                             
+block scripts
+    script(src="welcome.bundle.js")          
+                                                
 
 
             

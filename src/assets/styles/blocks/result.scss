@@ -1,0 +1,83 @@
+.result{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #3f3843;
+    
+      
+}
+
+.result__list{
+    display: flex;       
+    justify-content: flex-start;   
+    width: 80%;
+    padding: 20px 0px 20px 0px;
+
+    @include phones($phones){
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    } 
+}
+
+.result__item{
+    display: flex;
+    justify-content: space-between;   
+    flex-flow: column;   
+    margin-bottom: 20px;
+    width: 50%;
+    margin-right: 10%;
+    
+
+    &:last-child{
+        margin-right: 0;
+    }   
+
+    @include tablets($tablets){
+        margin-bottom: 40px; 
+        
+    }
+    @include phones($phones){
+        margin-bottom: 20px;       
+        width: 100%;
+        margin-left: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.result__value{
+    @include PlayfairDisplay-Black;
+    font-size: 50px;
+    color: $white;   
+   vertical-align: baseline; 
+   margin-bottom: 20px;
+   
+   @include interval($interval){
+    font-size: 50px;
+    }
+
+    @include tablets($tablets){
+        font-size: 40px; 
+        
+    }
+
+    @include phones($phones){
+       margin-right: 0px;
+    }
+}
+
+.result__feature{
+    @include roboto-medium;
+    color: $yellow;
+    // width: 66%;
+    font-size: 20px;
+    line-height: 20px;
+
+    @include phones($phones){
+        display: flex;
+        align-items: center;
+       width: 90%;
+    }
+}

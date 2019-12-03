@@ -18,10 +18,10 @@ module.exports = {
     }),
     require("postcss-nested"),
     require("postcss-rgb"),
-    require("postcss-inline-svg")({
-      removeFill: true,
-      path: "./src/assets/images/icons"
-    }),
+    // require("postcss-inline-svg")({
+    //   // removeFill: true,
+    //   path: "./src/assets/images/icons"
+    // }),
     require("postcss-svgo"),
     require("cssnano")(),
     require("postcss-pxtorem")({

@@ -1,0 +1,55 @@
+extends ../main.layout.pug
+
+block content
+    .wrapper 
+        .bankruptcy
+            .bankruptcy_one
+                include ../common/header.pug 
+                .container--bankruptcy     
+                    .container
+                        ul.bunkruptcy__breadcrumbs
+                            li.bunkruptcy__item
+                                a.bunkruptcy__link(href='http://yuriskonsult.info') главная страница
+                            li.bunkruptcy__item
+                                a.bunkruptcy__link.bunkruptcy__link--none(href='http://yuriskonsult.info/services.html') услуги частным клиентам
+                        .bankruptcy__title 
+                            h1.bankruptcy__caption Банкротство физических лиц 
+                        .bankruptcy__content
+                            .bankruptcy__text Попав в трудную жизненную ситуацию человек пытается или найти выход или просто опускает руки. Не надо отчаиваться, надо просто знать и понимать, что есть ЛЕГАЛЬНЫЙ способ освободиться от долгов свыше 500 000 рублей - 127 Федеральный Закон о несостоятельности (банкротстве). Мы поможем вам избавиться от претензий приставов, коллекторов и банков и совершенно законно оформить процедуру банкротства. 
+                .result
+                    ul.result__list
+                        li.result__item
+                            p.result__value 112 клиентов                              
+                            p.result__feature признано банкротами
+                        li.result__item
+                            p.result__value 73 505 000 ₽                                 
+                            p.result__feature списано кредитной задолженности 
+            .advantage-bankruptcy.bankruptcy_two
+                .container
+                    .advantage__title 
+                        h2.advantage__caption Наши преимущества                 
+                    main.advantage__content.advantage__content--padding 
+                        ul.advantage__list
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('knowledge','advantage__knowledge') 
+                                .advantage__feature 100% гарантия результата                           
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('price','advantage__price') 
+                                .advantage__feature Оплата наших услуг в рассрочку до 10 месяцев                           
+                            li.advantage__item  
+                                .advantage__icons              
+                                    +icon('distantly','advantage__distantly') 
+                                .advantage__feature Полный отчет о ходе вашего дела всю процедуру банкротства                            
+                            li.advantage__item  
+                                .advantage__icons-margin              
+                                    +icon('concern','advantage__concern') 
+                                .advantage__feature Oгромный опыт юридической и судебной практики
+            .bankruptcy_three
+                .bankruptcy__work
+        include ../common/menu.pug 
+        include ../common/form.pug         
+block scripts
+    script(src="bankruptcy.bundle.js")                                       
+                            

@@ -1,0 +1,39 @@
+extends ../main.layout.pug
+
+block content
+    .wrapper 
+        .contacts
+            include ../common/header.pug      
+            .container
+                .contacts__title 
+                    h1.contacts__caption-info Контактная информация
+                 
+                .contacts__content
+                    .contacts__block-left
+                        .contacts__item
+                            h4.contacts__caption ОФИС
+                            p 625000, Тюмень #[br] ул. Гастелло #[br] д. 57, офис 24 
+                        .contacts__item
+                            h4.contacts__caption ТЕЛЕФОН
+                            p +7 (904) 49-59-855
+                            p 8 (3452) 95-58-55
+                    .contacts__block-right     
+                        .contacts__item
+                            h4.contacts__caption НАПИСАТЬ НАМ
+                            p info@yuriskonsult.info  
+            .contacts__right 
+                section.map-content
+                    .map#map
+                h2.contacts__right-title Задать вопрос
+                form.contacts__form(action="" id="contacts-form") 
+                    label.contacts__email(for="")
+                        input.contacts__elem(type="email" placeholder="Ваш e-mail" name="email" required)
+                        .error.error--email(id="errorEmail")
+                    label.contacts__textarea(for="")
+                        textarea.contacts__block-text(type="text" name="comment" required="" placeholder="Ваш вопрос")
+                        .error.error--comment(id="errorComment")
+                    button.contacts__btn ОТПРАВИТЬ                           
+        include ../common/menu.pug 
+block scripts  
+    script(src='contacts.bundle.js')                  
+//-   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_ru&apikey=eea68b12-ab01-45b7-a76f-9ab67e5c9002" type="text/javascript") 

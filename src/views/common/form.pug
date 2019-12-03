@@ -1,0 +1,9 @@
+form.form(action="send.php" method="post" id='form')  
+    label.form__block(for="name")
+        input.form__input(type="text" placeholder="Ваше имя" name="fio" required) 
+        .error.error--name(id="errorName") 
+    label.form__block(for="tel")
+        input.form__input(type="tel" placeholder="Телефон" name="tel" required) 
+        .error.error--tel(id="errorTel")    
+    .form__btn
+        button.form__button(id='send' onclick="return false;") Отправить

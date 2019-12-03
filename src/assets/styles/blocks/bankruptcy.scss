@@ -1,0 +1,196 @@
+.bankruptcy{
+    display: flex;
+    flex-flow: column;   
+    align-items: center;       
+    height: 100%;
+    width: 100vw;   
+}
+
+.bankruptcy_one{
+    display: flex;
+    flex-flow: column;  
+    background:url(./assets/images/img/feedback.png) center center no-repeat; 
+    background-size: cover;
+    background-position: center;
+    align-items: center;      
+    height: 100hv;
+    width: 100vw;   
+}
+
+.container--bankruptcy{
+    background: $white;
+    width: 100%;
+    height: 100%;
+}
+
+.bankruptcy__title{
+    display: flex;
+    align-items: flex-start;
+     color: $yellow;     
+     width:100%;   
+ 
+     @include tablets($tablets){
+         margin-bottom: 0px;
+     }
+ 
+     @include phones($phones){
+         flex-flow: column;
+     }
+ }
+ 
+.bankruptcy__caption{
+     width: 90%;    
+     color: #3f3843;
+     
+    @include tablets($tablets){
+         font-size: 36px;
+    }
+ 
+    @include phones($phones){
+         width: 100%;
+         margin-right: 15px;
+         margin-bottom: 25px;
+    }
+}
+
+.bankruptcy__content{
+    display: flex;
+    width: 100%;
+}
+
+.bunkruptcy__breadcrumbs{
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    width: 100%;
+
+    @include phones($phones){
+        display: none;
+    }    
+
+}
+
+.bunkruptcy__item{
+    position: relative;
+    margin-right: 42px;
+}
+
+.bunkruptcy__link{
+    font-size: 14px;
+    line-height: 1em;
+    color: #999999;
+    text-decoration: underline;
+    white-space: nowrap;    
+    transition: color 0.2s ease-in-out;   
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: -28px;
+        background: #999999;
+        width: 10px;
+        height: 1px;        
+    }
+    
+    &:hover{
+        color: #000000;
+    }
+}
+
+.bunkruptcy__link--none{
+    &::after{
+        display: none;
+    }
+}
+
+.bankruptcy__text{
+    @include roboto-regular;    
+    font-size: 18px;
+    line-height: 32px;
+    width: 100%;
+    color: #3f3843;
+    padding-left: 20%;
+    margin-bottom: 50px;
+    
+    @include interval($interval){
+        font-size: 14px;
+        height: 100%;
+
+    }
+
+    @include tablets($tablets){
+        width: 100%; 
+        font-size: 12px;        
+    }
+
+    @include phones($phones){
+        padding-left: 5%;
+       font-size: 14px;
+    }   
+}
+
+.bankruptcy_two{
+    display: flex;
+    flex-flow: column;  
+    background:url(./assets/images/img/services-desktop.png) center center no-repeat;  
+    background-size: cover;
+    background-position: center;
+    align-items: center;      
+    height: 100hv;
+    width: 100vw;  
+    padding-top: 50px;
+}
+
+.advantage__content--padding{
+    padding-bottom: 50px;
+}
+
+.advantage__icons-margin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 95px;
+    border: 2px solid $yellow;
+    border-radius: 50%;
+    margin-bottom: 25px; 
+    min-height: 25%;
+
+    @include tablets($tablets){
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.bankruptcy_three   {
+    display: flex;
+    flex-flow: column; 
+    background: #ffffff;    
+    padding: 50px 0 50px 0;
+    width: 100%;
+    height: 100%;
+    @include tablets($tablets){
+        align-items: center;
+        justify-content: center;
+    } 
+}
+
+.bankruptcy__work{
+    background:url(./assets/images/img/work.png) center center no-repeat;  
+    background-size: cover;
+    background-position: center;
+    align-items: center;      
+    height:350px;
+    width: 100vw; 
+    
+    @include tablets($tablets){
+        background:url(./assets/images/img/phones.png) center center no-repeat;  
+        background-size: cover;
+        background-position: center;
+        align-items: center;      
+        height:605px;
+        width: 325px; 
+    } 
+}
+ 

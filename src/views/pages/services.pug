@@ -2,25 +2,32 @@ extends ../main.layout.pug
 
 block content
     .wrapper 
-        .services
+        .services(id='services')
             include ../common/header.pug      
             .container
                 .services__title 
                     h1.services__caption Основные услуги                 
                 main.services__content                    
-                    button.services__button
+                    button.services__button(id='arbitration-btn')
                         .services__icons                                   
                             +icon('scale-active','services__scale-active') 
                             +icon('scale','services__scale') 
                         h2.services__feature Представительство в арбитражных судах и судах общей юрисдикции                        
-                    button.services__button
+                    button.services__button(id='private-btn')
                         .services__icons  
                             +icon('case-active','services__case-active')                                  
                             +icon('case','services__case') 
-                        h2.services__feature Услуги частным клиентам                       
-                    button.services__button
+                        h2.services__feature Услуги частным клиентам,#[br] банкротство физических лиц                      
+                    button.services__button(id='legal-btn')
                         .services__icons
                             +icon('tie-active','services__tie-active') 
                             +icon('tie','services__tie') 
                         h2.services__feature Услуги юридическим лицам 
+
+        include ../common/menu.pug 
+        include ../common/form.pug                  
         include ../common/arbitration.pug
+        include ../common/private.pug
+        include ../common/legal-entity.pug
+block scripts
+    script(src="services.bundle.js")         

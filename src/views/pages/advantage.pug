@@ -1,0 +1,38 @@
+extends ../main.layout.pug
+
+block content
+    .wrapper 
+        .advantage
+            include ../common/header.pug      
+            .container
+                .advantage__title 
+                    h1.advantage__caption Наши преимущества                 
+                main.advantage__content 
+                    ul.advantage__list
+                        li.advantage__item  
+                            .advantage__icons              
+                                +icon('knowledge','advantage__knowledge') 
+                            h2.advantage__feature Отличное знание законодательства
+                            p.advantage__text Мы знаем законодательство и постоянно повышаем свою квалификацию для предоставления качественных и компетентных услуг.
+                        li.advantage__item  
+                            .advantage__icons              
+                                +icon('price','advantage__price') 
+                            h2.advantage__feature Прозрачность ценообразования
+                            p.advantage__text Мы используем прозрачное ценообразование - с помощью специальных программ мы отслеживаем, сколько реально времени было потрачено нашими сотрудниками на каждого клиента. Каждый клиент понимает - за что и сколько он платит, на каждой стадии сотрудничества клиенту предоставляется подробный отчёт с расшифровкой стоимости.
+                        li.advantage__item  
+                            .advantage__icons              
+                                +icon('distantly','advantage__distantly') 
+                            h2.advantage__feature Дистанционное сотрудничество
+                            p.advantage__text Мы можем работать дистанционно. Не важно, находитесь Вы в Тюмени или в Москве, мы готовы оказать Вам юридическую помощь или защитить Ваши интересы в судах различной юрисдикции посредством дистанционного оказания услуг.
+                        li.advantage__item  
+                            .advantage__icons              
+                                +icon('concern','advantage__concern') 
+                            h2.advantage__feature Забота о клиентах
+                            p.advantage__text Мы заботимся о своих клиентах. И даже, если клиент решит отказаться от наших услуг, мы всегда готовы предоставить наработанные нами материалы для последующего их использования другими юристами.
+        include ../common/menu.pug 
+        include ../common/form.pug    
+block scripts
+    script(src="advantage.bundle.js")                                 
+
+            
+                    

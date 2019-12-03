@@ -1,200 +1,51 @@
 .arbitration{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(100, 86, 90, 0.5)
-    
+    @include block 
+
+}
+
+.arbitration--active{
+    left: 0px;
     
 }
 
 .arbitration__container{
-   
-    display: flex;
-    flex-flow: column; 
-    top: 0;
-    left: 0;
-    background-color: $white; 
-    opacity: 1;  
-    width: 95%;
-    height: 55%;
-    
-    
-    
-    @include tablets($tablets){
-        width: 100%;
-        height: 70%;
-        
-    }
-    
-    @include phones($phones){
-        height: 100%;
-    }
+   @include container    
 }
 
 .arbitration__header{
-    position: relative;
-    display: flex;
-    width: 100%;
-    max-width: 1400px;  
-    height: 40px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    @include tablets($tablets){
-        height: 90px;
-        
-    }
-    
+    @include header    
 }
 
 .arbitration__logo{
-    display: none;
-
-    @include tablets($tablets){
-        display: block;
-        background:url(./assets/images/img/logo.png) center center no-repeat; 
-        background-size: cover;
-        height: 100%;
-        width: 85px;
-        
-    }
-    
+    @include logo    
 }
 
 .arbitration__content{
-    display: flex;
-  flex-flow: column; 
-    padding: 0 20px 42px;
-    height: 80%;
-
-    @include tablets($tablets){
-        padding-top: 20px;
-    }
+    @include content
 }  
 .arbitration__title{
-    display: flex;
-    flex-flow: column;
-    color: $darkgray;
-    font-size: 30px;
-
-    &::after{
-        content: "";
-        display: block;
-        margin-top: 20px;
-        margin-left: 0;
-        width: 140px;
-        height: 2px;       
-        background-color: $yellow;
-        
-    }
-     
-    @include tablets($tablets){
-        width: 100%;
-        font-size: 25px;
-    }
+    @include title
 }
 
 .arbitration__close{
-    background: none;
-    outline: none;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    width: 30px;
-    height: 30px;
-    display: flex; 
-    justify-content: center;
-    align-items: center;  
-    padding: 0;  
-    
-    &:hover::before{
-         background-color: $yellow;
-    }
-
-    &:hover::after{
-        background-color: $yellow;
-   }
-
-    &::before{       
-        content: ' ';        
-        height: 30px;
-        width: 1px;
-        background-color: $darkgray;
-        transform: rotate(45deg);
-        transition:  0.3s ease-in-out;
-        
-    }
-
-    &::after{        
-        content: ' ';
-        height: 30px;
-        width: 1px;
-        background-color: $darkgray;
-        transform: rotate(-45deg);
-        transition:  0.3s ease-in-out;
-    }
+    @include close
 }
 
 .arbitration__list{
-    display: flex;
-    flex-flow: column;
-    flex-flow: row wrap;
-    align-content: space-between;
-
-    &::after{
-        content: "";
-        display: block;
-        margin-bottom: 20px;
-        margin-left: 0;
-        width: 100%;
-        height: 2px;       
-        background-color: $gray;
-        opacity:0.2;
-    }
+    @include list
 }
 
 .arbitration__item{
-    margin-bottom: 20px;
-    display: flex;
-    width: 33%;
-    
-
-    @include tablets($tablets){
-        width: 48%;
-              
-            
-    }
-    @include phones($phones){
-        width: 100%;
-    }
+    @include item
 }
 
 .arbitration__icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 2px solid $yellow;
-    border-radius: 50%;
-    margin-right: 5%;
+    @include icons
     
 }
 
 .arbitration__feature{
-    display: flex;    
-    align-items: center;
-    width: 80%;
-    @include  PlayfairDisplay;
-    font-weight: normal;
-   font-size: 16px;
-    color: $darkgray;
+    @include feature
 }
 
 .arbitration__preparation{
@@ -229,53 +80,15 @@
 }
 
 .arbitration__footer-list{
-    display: flex;
-    flex-flow: row wrap;
-    align-content: space-between;
+    @include footer-list
     
 }
 
 .arbitration__footer-item{
-    display: flex;
-    flex-flow: column;
-    width: 32%;
-    padding: 0 10px 10px;
-    
-
-    @include tablets($tablets){
-        width: 48%;
-        padding: 10px;
-        
-              
-            
-    }
-    @include phones($phones){
-        width: 100%;
-        margin-bottom:12px;
-
-    }
+    @include footer-item
 
 }
 
 .arbitration__footer-feature{
-    display: flex;    
-    @include roboto-light;
-    color: $darkgray;
-    font-size: 14px;
-    line-height: 22px;
-    text-decoration: underline #cccccc;
-
-    &::before{
-        content: "";
-    // position: absolute;
-    // top: 9px;
-    // left: 0;
-    display: block;
-    width: 5px;
-    height: 5px;
-    background-color:$yellow;
-    border-radius: 50%;
-    margin-right: 15px;
-    margin-top: 8px;
-    }
+    @include footer-feature
 }
